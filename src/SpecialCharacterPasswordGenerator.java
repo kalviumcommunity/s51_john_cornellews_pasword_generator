@@ -11,6 +11,8 @@ public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
             setLength(length);
         } catch (Exception e) {
             System.out.println("Invalid input. Please enter an integer.");
+        }finally{
+            input.close();
         }
     }
 
