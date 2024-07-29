@@ -13,9 +13,13 @@ public class AlphanumericPasswordGenerator extends PasswordGenerator {
         } catch (Exception e) {
             System.out.println("Invalid input. Please enter an integer.");
         }finally{
-            inputAlpha.close();
+            // inputAlpha.close();
         }
     }
+
+    // create a method
+    // input closer 
+    // input.close()
 
     @Override
     public String generatePassword() {
