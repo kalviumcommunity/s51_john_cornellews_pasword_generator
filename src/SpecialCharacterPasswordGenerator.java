@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
-    private Scanner input;
+    static Scanner input;
 
     // Method to get length from the user
     public void getLengthFromUser() {

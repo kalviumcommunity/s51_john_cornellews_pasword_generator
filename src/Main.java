@@ -3,7 +3,7 @@ package src;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter alpha for alpha numeric and special for special character based password");
         String choice = input.nextLine();
@@ -26,7 +26,7 @@ public class Main {
             }
             // eligible for automatic garbage collection
             alphaGen = null;
-        } 
+        }
         else if (choice.equals("special")) {
             // usage of new keyword to use dynamic memory management
             SpecialCharacterPasswordGenerator specialGen[] = new SpecialCharacterPasswordGenerator[num];
@@ -40,5 +40,7 @@ public class Main {
             specialGen = null;
         }
         input.close();
+        AlphanumericPasswordGenerator.inputAlpha.close();
+        SpecialCharacterPasswordGenerator.input.close();
     }
 }

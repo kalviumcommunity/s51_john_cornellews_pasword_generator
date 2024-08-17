@@ -6,8 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class AlphanumericPasswordGenerator extends PasswordGenerator {
-    private Scanner inputAlpha;
-
+    static Scanner inputAlpha;
     // Method to get length from the user
     public void getLengthFromUser() {
         System.out.println("Enter the length of the password:");
@@ -21,11 +20,11 @@ public class AlphanumericPasswordGenerator extends PasswordGenerator {
     }
 
     // Method to close the Scanner instance
-    public void closeInput() {
-        if (inputAlpha != null) {
-            inputAlpha.close();
-        }
-    }
+    // public void closeInput() {
+    //     if (inputAlpha != null) {
+    //         inputAlpha.close();
+    //     }
+    // }
 
     @Override
     public String generatePassword() {
