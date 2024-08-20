@@ -41,5 +41,5 @@ This Java application demonstrates the use of core Object-Oriented Programming (
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-repo/password-generator.git
+git clone https://github.com/kalviumcommunity/s51_john_cornellews_pasword_generator.git
 ```
