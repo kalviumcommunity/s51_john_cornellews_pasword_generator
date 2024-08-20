@@ -40,7 +40,8 @@ public class Main {
             specialGen = null;
         }
         input.close();
-        AlphanumericPasswordGenerator.inputAlpha.close();
-        SpecialCharacterPasswordGenerator.input.close();
+        // static methods to close the scanner class
+        AlphanumericPasswordGenerator.closeInput();
+        SpecialCharacterPasswordGenerator.closeInput();
     }
 }

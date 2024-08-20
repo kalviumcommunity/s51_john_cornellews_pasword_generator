@@ -20,11 +20,11 @@ public class AlphanumericPasswordGenerator extends PasswordGenerator {
     }
 
     // Method to close the Scanner instance
-    // public void closeInput() {
-    //     if (inputAlpha != null) {
-    //         inputAlpha.close();
-    //     }
-    // }
+    static void closeInput() {
+        if (inputAlpha != null) {
+            inputAlpha.close();
+        }
+    }
 
     @Override
     public String generatePassword() {
