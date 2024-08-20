@@ -20,7 +20,7 @@ public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
     }
 
     // Method to close the Scanner instance
-    public void closeInput() {
+    static void closeInput() {
         if (input != null) {
             input.close();
         }
