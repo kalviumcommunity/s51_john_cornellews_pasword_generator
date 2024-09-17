@@ -1,16 +1,20 @@
-// SpecialCharacterPasswordGenerator.java
 package src;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
-    static Scanner input;
+public class SpecialCharacterPasswordGenerator extends PasswordGenerator implements AutoCloseable {
+    private Scanner input;
+
+    // Constructor to initialize the Scanner object
+    public SpecialCharacterPasswordGenerator() {
+        System.out.println("Special Character Password Generator Initialized.");
+        this.input = new Scanner(System.in);
+    }
 
     // Method to get length from the user
     public void getLengthFromUser() {
         System.out.println("Enter the length of the password:");
-        input = new Scanner(System.in);
         try {
             int length = input.nextInt();
             setLength(length);
@@ -19,10 +23,13 @@ public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
         }
     }
 
-    // Method to close the Scanner instance
-    static void closeInput() {
+    // Override close method to close the Scanner
+    @Override
+    public void close() {
         if (input != null) {
             input.close();
+            input = null; // Clear reference to allow garbage collection
+            System.out.println("SpecialCharacterPasswordGenerator resources have been cleaned up.");
         }
     }
 
@@ -42,8 +49,6 @@ public class SpecialCharacterPasswordGenerator extends PasswordGenerator {
         for (int i = 0; i < length; i++) {
             password.append(characters.charAt(random.nextInt(characters.length())));
         }
-        // eligible for automatic garbage collection
-        random = null;
         return password.toString();
     }
 }
