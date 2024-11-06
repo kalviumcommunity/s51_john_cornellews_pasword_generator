@@ -12,17 +12,6 @@ public class SpecialCharacterPasswordGenerator extends PasswordGenerator impleme
         this.input = new Scanner(System.in);
     }
 
-    // Method to get length from the user
-    public void getLengthFromUser() {
-        System.out.println("Enter the length of the password:");
-        try {
-            int length = input.nextInt();
-            setLength(length);
-        } catch (Exception e) {
-            System.out.println("Invalid input. Please enter an integer.");
-        }
-    }
-
     // Override close method to close the Scanner
     @Override
     public void close() {
