@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class AlphanumericPasswordGenerator extends PasswordGenerator implements AutoCloseable {
     private Scanner inputAlpha;
 
-    // Constructor to initialize the Scanner object
+
     public AlphanumericPasswordGenerator() {
         System.out.println("Alphanumeric Password Generator Initialized.");
         this.inputAlpha = new Scanner(System.in);
     }
 
 
-    // Override close method to close the Scanner
+
     @Override
     public void close() {
         if (inputAlpha != null) {
